@@ -15,3 +15,32 @@
 	background-color:#040404;
 	color:white;
 }
+#zad2_kurczaki_kolor caption
+{
+	border-top: 1px;
+	border-right: 1px;
+	border-left: 1px;
+	border-style: dashed;
+}
+#zad2_kurczaki_kolor th
+{
+	background-color: #dde9ff;
+}
+tr.ciemny
+{
+	background-color: #ecf7ff;
+}
+tr.ciemny:hover
+{
+	background-color: #130800;
+	color: #999999;
+}
+tr.jasny
+{
+	background-color: #fbfdff;
+}
+tr.jasny:hover
+{
+	background-color: #040200;
+	color: #666666;
+}
