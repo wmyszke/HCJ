@@ -1,0 +1,17 @@
+#zad2_kurczaki table, td, th
+{
+	border: 1px solid black;
+}
+#zad2_kurczaki caption
+{
+	border-top:1px;
+	border-right:1px;
+	border-left:1px;
+	border-style:dashed;
+	
+}
+#zad2_kurczaki tr:hover
+{
+	background-color:#040404;
+	color:white;
+}
