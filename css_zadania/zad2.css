@@ -44,3 +44,14 @@ tr.jasny:hover
 	background-color: #040200;
 	color: #666666;
 }
+
+#zad2_szes_czb caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+
+td.pochyla {
+	font-style: italic;
+}
