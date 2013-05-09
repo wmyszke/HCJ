@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'wlodek_001';
+  src: url('../fonts/wlodek_001.ttf');
+}
+#wlasna_czcionka p { font-family: 'wlodek_001' }
