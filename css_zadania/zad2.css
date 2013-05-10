@@ -90,3 +90,24 @@ td.prawa:hover {
 	border-left: 1px dashed;
 	border-bottom: 0px none;
 }
+
+#populacja_czb_mala td {
+	border-bottom-style:none;
+	border-top-style:none;
+	text-align: right;
+	padding-right:19%;
+}
+#stopka_populacja td {
+	border-bottom-style: solid;
+	border-top-style: none;
+}
+#populacja_czb_mala caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+#populacja_czb_mala table {
+	width:50%;
+	margin:auto;
+}
