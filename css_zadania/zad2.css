@@ -153,3 +153,36 @@ tr.populacja_kolor_jasny:hover {
 	color:white;
 	font-weight: bold;
 }
+
+
+#Worksheet caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+#Worksheet table {
+	margin: auto;
+	width:350px;
+}
+#Worksheet td {
+	border-style:none;
+}
+td.W_jeden {
+	width:20px;
+}
+td.W_dwa {
+	width:230px;
+	text-align:left;
+	padding-left:4px;
+}
+td.W_trzy {
+	width:50px;
+	
+}
+td.W_cztery {
+	width:50px;
+}
+td.jed_pie {
+	text-decoration:underline
+}
