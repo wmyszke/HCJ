@@ -95,9 +95,9 @@ td.prawa:hover {
 	border-bottom-style:none;
 	border-top-style:none;
 	text-align: right;
-	padding-right:19%;
+	padding-right:12%;
 }
-#stopka_populacja td {
+#stopka_populacja_mala td {
 	border-bottom-style: solid;
 	border-top-style: none;
 }
@@ -110,4 +110,46 @@ td.prawa:hover {
 #populacja_czb_mala table {
 	width:50%;
 	margin:auto;
+}
+
+#populacja_kolor td {
+	border-bottom-style:none;
+	border-top-style:none;
+	text-align: right;
+	padding-right:12%;
+}
+#stopka_populacja_mala_kolor td {
+	border-bottom-style: solid;
+	border-top-style: none;
+}
+#populacja_kolor caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+#populacja_kolor table {
+	width:50%;
+	margin:auto;
+}
+tr.populacja_kolor_ciemny {
+	background-color:#eceeec;
+	color: black;
+}
+tr.populacja_kolor_ciemny:hover {
+	background-color:#3c82dc;
+	color:white;
+}
+tr.populacja_kolor_jasny {
+	background-color:#fcfefc;	
+	color: black;
+}
+tr.populacja_kolor_jasny:hover {
+	background-color:#3c82dc;	
+	color: white;
+}
+#populacja_kolor th {
+	background-color:#ccc22c;
+	color:white;
+	font-weight: bold;
 }
