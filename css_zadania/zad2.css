@@ -55,3 +55,21 @@ tr.jasny:hover
 td.pochyla {
 	font-style: italic;
 }
+#zad2_szes_kol caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+td.lewa {
+	background-color: yellow;
+}
+td.prawa {
+	background-color: GreenYellow;
+}
+td.lewa:hover {
+	background-color: GreenYellow ;
+}
+td.prawa:hover {
+	background-color: yellow;
+}
