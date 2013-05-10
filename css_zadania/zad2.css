@@ -73,3 +73,20 @@ td.lewa:hover {
 td.prawa:hover {
 	background-color: yellow;
 }
+
+#populacja_czb td {
+	border-bottom-style:none;
+	border-top-style:none;
+	text-align: right;
+	padding-right:19%;
+}
+#stopka_populacja td {
+	border-bottom-style: solid;
+	border-top-style: none;
+}
+#populacja_czb caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
