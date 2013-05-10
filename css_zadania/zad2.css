@@ -186,3 +186,22 @@ td.W_cztery {
 td.jed_pie {
 	text-decoration:underline
 }
+
+#Worksheet_kolor caption {
+	border-top: 1px dashed;
+	border-right: 1px dashed;
+	border-left: 1px dashed;
+	border-bottom: 0px none;
+}
+#Worksheet_kolor table {
+	margin: auto;
+	width:350px;
+	background-image:url('../zdjecia_zad2/worksheet_kolor.png');
+}
+#Worksheet_kolor td {
+	border-style:none;
+	color: white;
+}
+#Worksheet_kolor p {
+	text-align:center;
+}
