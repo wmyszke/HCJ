@@ -223,3 +223,34 @@ td.tfoot_tr {
 	border-left:0px none;
 	text-align:left;
 }
+
+#table_atit_pierwsza_kolor{
+	width:210px;
+	background-image:url('../zdjecia_zad2/czart_tlo.png');	
+}
+#table_atit_druga_kolor {
+	width:335px;
+	margin-left: 30px;
+}
+td.atit_naglowek {
+	color: #9fa273;
+	font-weight:bold;
+}
+td.atit_lewy {
+	color: #b9bdc0;
+}
+td.atit_srodek {
+	color: #4dc025;	
+}
+td.atit_prawy {
+	color: #ff6333;
+}
+td.tfoot_tr_kolor {
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+	text-align:left;
+}
+#table_atit_druga_kolor{
+	background-image:url('../zdjecia_zad2/czart_tlo.png');	
+}
