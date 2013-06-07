@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Wprowadzenie do SQLite</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			p.lokalny, h1.lokalny, h2.lokalny, h3.lokalny {
+			font-family:'Segoe UI','DejaVu Sans',Verdana,Geneva,sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p style="font-size:220%;">Wprowadzenie do SQLite</p>
+					<p>
+						<small>@wmyszke</small>
+				</p>
+				</section>
+				<section>
+					<h2>Zagadnienia</h2>
+					<p class="fragment lokalny">Wstęp</p>
+					<p class="fragment lokalny">Czym jest SQLite</p>
+					<p class="fragment">Pierwsze kroki</p>
+					<p class="fragment lokalny">Narzędzia do obsługi baz SQLite</p>
+					<p class="fragment lokalny">Przykłady użycia</p>
+				</section>
+				<section>
+					<h3 class="lokalny">Wstęp</h3>
+					<p class="lokalny">Skąd właściwie pomysł na prezentację o SQLite?</p>
+					<p class="lokalny">Mimo, iż projekt SQLite ma swój początek w wydaniu kodu Alpha 29 maja 2000 roku, to obecnie
+					osoby niebędące ze świata IT a chcące rozpocząć pracę z bazami danych i szukające najlepszego wyboru
+					mogą w ogóle nie trafić na bazę SQLite</p>
+				</section>
+				<section data-state="soothe">
+					<h3 class="lokalny">Czym jest SQLite</h3>
+				</section>
+				<section>
+					
+					<section>
+						<p class="lokalny">SQLite jest biblioteką oprogramowania, która samodzielnie realizuje bezserwerowy, bezkonfiguracyjny silnik bazy danych transakcyjnych. </p>
+						
+					</section>
+					<section data-state="blackout">
+						<h2 class="lokalny" style="color:white;">Samodzielny (self-contained)</h2>
+						<p class="lokalny" style="color:white;">
+							SQLite wymaga niewielkiego wsparcia ze strony bibliotek zewnętrznych lub systemu operacyjnego. Te cecha przyczynia się do dużych możliwości wykorzystania SQLite w urządzeniach wbudowanych. W tym kontekście właściwym zastosowaniem SQLite jest użycie w aplikacjach które muszą być uruchamiane bez zmian na różnych komputerach w różnych konfiguracjach.
+						</p>
+					</section>
+					<section data-state="blackout">
+						<h2 class="lokalny" style="color:white;">Bezserwerowy</h2>
+						<p class="lokalny" style="color:white;">
+							Większość silników bazodanowych SQL jest zaimplementowanych jako osobny proces serwerowy. Programy, które chcą uzyskać dostęp do bazy danych komunikują się z serwerem używając między-procesorowej komunikacji (proces aplikacji oraz proces bazy danych, zwykle poprzez TCP/IP) aby wysyłać żądania do serwera oraz by otrzymać rezultaty żądania. SQLite nie działa w ten sposób. W SQLite, proces który chce uzyskać dostęp do bazy danych odczytuje i zapisuje z pliku bazy danych na dysku. Nie ma żadnego pośredniczącego procesu serwerowego.
+						</p>
+					</section>
+					<section data-state="blackout">
+						<h2 class="lokalny" style="color:white;">Bezkonfiguracyjny</h2>
+						<p class="lokalny" style="color:white;">
+							SQLite nie wymaga instalacji przed pierwszym użyciem. Nie procedury instalacji. Nie ma żadnego serwera który musi zostać uruchomiony, zatrzymany, lub skonfigurowany. Nie ma potrzeby by administrator przydzielał uprawnienia użytkownikom. SQLite nie używa żadnych plików konfiguracyjnych. Nic nie trzeba robić by powiedzieć systemowi że SQLite jest uruchomiony. Awaria systemu lub przerwa w zasilaniu nie wymagają podjęcia działań naprawczych na bazie danych.
+						</p>
+					</section>
+					<section data-state="blackout">
+						<h2 class="lokalny" style="color:white;">Transakcyjny</h2>
+						<p class="lokalny" style="color:white;">
+							Transakcyjna baza danych to taka baza w której wszystkie zmiany i zapytania są atomowe, spójne, wyizolowane oraz trwałe (ACID – atomicity, consistency, isolation, durability). SQLite implementuje transakcje które spełniają wszystkie kryteria koncepcji ACID, nawet gdy transakcja jest przerwana przez awarię programu, awarię systemu operacyjnego lub przerwie w zasilaniu.
+						</p>
+					</section>
+				</section>
+				<section data-state="soothe">
+					<h3 class="lokalny">Pierwsze kroki</h3>
+				</section>
+				<section>
+					<h2 class="lokalny">Pobieranie</h2>
+					<h2 class="lokalny">Instalacja</h2>
+					<h2 class="lokalny">Pierwsza baza</h2>
+				</section>
+				<section>
+					<h3 class="lokalny">Pobieranie</h3>
+					<img src="./zdjecia/Pobranie.png" />
+					<p class="lokalny">Należy wybrać pierwszą pozycję.</p>
+				</section>
+				<section>
+					<h3 class="lokalny">Pobieranie (ciąg dalszy)</h3>
+					<img src="./zdjecia/Rozmiar_zipa.png" />
+					<p class="lokalny">Spakowany plik to tylko ~270 KB a rozpakowany ~500 KB</p>
+					<img src="./zdjecia/Rozpakowany_exe_tylko_rozmiar.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Instalacja</h3>
+					<img src="./zdjecia/SQLite_instalacja.png" />
+					<p class="lokalny">Rozpakowanie jest równoznaczne instalacji.</p>
+				</section>
+				<section>
+					<h3 class="lokalny">Pierwsza baza</h3>
+					<p class="lokalny">Potrzebna jest linia poleceń</p>
+					<img src="./zdjecia/cmd.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Pierwsza baza (ciąg dalszy)</h3>
+					<p class="lokalny">Wpisanie sqlite3.exe wlodek.db wskazuje na baze z którą rozpocznie się pracę. Jeśli plik nie istnieje to zostanie utworzony, ale tylko jeśli wypełni się bazę danymi.</p>
+					<img src="./zdjecia/cmd2.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Pierwsza baza (ciąg dalszy)</h3>
+					<p class="lokalny">Aby wypełnić bazę należy stworzyć tabelę.</p>
+					<img src="./zdjecia/cmd3.png" />
+					<img src="./zdjecia/win_explorer3.png" />
+				</section>
+				<section data-state="soothe">
+					<h3 class="lokalny">Narzędzia do obsługi baz SQLite</h3>
+				</section>
+				<section>
+					<h3 class="lokalny">Narzędzia</h3>
+					<ul>
+						<li class="lokalny">Mozilla Firefox</li>
+						<li class="lokalny">SQLite Manager (Dodatek do Firefoxa)</li>
+					</ul>
+				</section>
+				<section>
+					<h3 class="lokalny">Narzędzia (ciąg dalszy)</h3>
+					<p class="lokalny">Zainstalowany SQLite w Firefoxie</p>
+					<img src="./zdjecia/sqlite_manager.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Narzędzia (ciąg dalszy)</h3>
+					<p class="lokalny">Jak uruchomić</p>
+					<img src="./zdjecia/narzedzia_sqlite_manager.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Narzędzia (ciąg dalszy)</h3>
+					<p class="lokalny">SQLite Manager gotowy do pracy</p>
+					<img src="./zdjecia/sqlite_manager_bez_firefoxa.png" />
+				</section>
+				<section data-state="soothe">
+					<h3 class="lokalny">Przykłady użycia</h3>
+				</section>
+				<section>
+					<h3 class="lokalny">SQLite Manager w użyciu</h3>
+					<p class="lokalny">SQLite Manager gotowy do pracy (CREATE)</p>
+					<img src="./zdjecia/Zarzadzanie_baza_z_poziomu_SQLite.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">SQLite Manager w użyciu</h3>
+					<p class="lokalny">SQLite Manager gotowy do pracy (SELECT)</p>
+					<p class="lokalny">Widać relacje w działaniu</p>
+					<img src="./zdjecia/Zarzadzanie_baza_z_poziomu_SQLite2.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">IDLE - Python</h3>
+					<p class="lokalny">SQLite jest standardową biblioteką Pythona</p>
+					<img src="./zdjecia/idle_sqlite3.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Python - przykładowe zapytanie</h3>
+					<img src="./zdjecia/python_zapytanie.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Python - zapytanie</h3>
+					<pre><code data-trim contenteditable>
+					SELECT
+e.nda_code "Exchange code"
+,e.nda_name "Exchange name"
+,c.Country "Country"
+FROM
+(SELECT * FROM Exchange) e
+INNER JOIN
+(SELECT * FROM Country) c
+ON e.Country_id=c.id
+					</code></pre>
+				</section>
+				<section>
+					<h3 class="lokalny">Python - rezultat zapytania</h3>
+					<img src="./zdjecia/rezultat_zapytania.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Python - Apache - SQLite</h3>
+					<img src="./zdjecia/strona_www.png" />
+				</section>
+				<section>
+					<h3 class="lokalny">Python - Apache - SQLite</h3>
+					<p class="lokalny">Fragment kodu strony</p>
+					<img src="./zdjecia/strona_www_fragment_kodu.png" />
+				</section>
+				<section class="lokalny">
+					<h2 class="lokalny">Źródła</h2>
+					<ul>
+						<li class="lokalny"><a href="http://pl.wikipedia.org/wiki/SQLite">Wikipedia</a></li>
+						<li class="lokalny"><a href="http://www.sqlite.org/">Strona SQLite</a></li>
+						<li class="lokalny"><a href="http://www.blog.pythonlibrary.org/">Python library blog</a></li>
+					</ul>
+				</section>
+			</div> <!-- div class slides -->
+		</div> <!-- div reveal -->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
